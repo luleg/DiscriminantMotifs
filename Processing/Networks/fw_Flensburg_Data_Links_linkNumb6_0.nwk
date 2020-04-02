@@ -1,0 +1,147 @@
+# One weak connected component from an initial graph with characteristics :
+# # http://esapubs.org/archive/ecol/E092/174/default.htm#data
+# # for kind of link : 6
+# number of removed self loops : 0
+# number of removed multi edges : 0
+# percentage of bipartivity : 100
+# percentage of bidirected edges : 0.0
+# number of nodes : 58; number of edges : 133
+# in this component : 
+# bipartivity : 1
+# percentage of bidirected edges : 0.0
+# number of nodes : 58; number of edges : 133
+!n:58
+!m:133
+0 1
+0 2
+3 4
+3 5
+3 6
+3 7
+3 8
+9 4
+9 5
+9 6
+9 7
+9 8
+10 4
+10 5
+10 6
+10 7
+10 8
+11 12
+11 13
+11 5
+11 7
+11 14
+15 12
+15 13
+15 5
+15 7
+15 14
+16 4
+16 5
+16 6
+16 7
+16 8
+17 13
+17 4
+17 5
+17 6
+17 7
+17 8
+18 4
+18 5
+18 6
+18 7
+18 8
+19 4
+19 5
+19 6
+19 7
+19 8
+20 12
+20 13
+21 4
+21 5
+21 6
+21 7
+21 8
+22 1
+22 23
+22 24
+22 2
+22 25
+22 26
+22 27
+22 28
+22 29
+30 4
+30 5
+31 27
+32 23
+32 25
+32 26
+33 23
+33 2
+34 35
+34 36
+34 37
+34 2
+38 1
+38 23
+38 24
+38 28
+39 1
+39 23
+39 24
+39 2
+39 25
+39 26
+39 27
+39 28
+40 27
+41 24
+41 2
+42 28
+43 27
+44 12
+44 13
+44 7
+44 14
+45 12
+45 13
+45 7
+45 14
+46 23
+47 23
+47 2
+47 25
+48 1
+48 23
+48 25
+49 12
+49 13
+49 6
+49 7
+49 14
+50 1
+50 23
+50 25
+50 26
+50 28
+51 1
+51 23
+51 25
+51 26
+51 28
+52 25
+53 25
+54 25
+55 25
+55 12
+55 13
+55 7
+55 14
+56 24
+57 28

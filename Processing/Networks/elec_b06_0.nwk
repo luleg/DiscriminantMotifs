@@ -1,0 +1,114 @@
+# One weak connected component from an initial graph with characteristics :
+#  https://icon.colorado.edu/#!/networks
+# number of removed self loops : 0
+# number of removed multi edges : 0
+# percentage of bipartivity : 100
+# percentage of bidirected edges : 0.0
+# number of nodes : 54; number of edges : 101
+# in this component : 
+# bipartivity : 0
+# percentage of bidirected edges : 0.0
+# number of nodes : 54; number of edges : 101
+!n:54
+!m:101
+0 1
+1 10
+1 45
+1 40
+1 24
+1 48
+1 22
+2 3
+3 39
+3 41
+3 30
+3 49
+3 31
+3 52
+3 19
+4 5
+5 43
+5 40
+5 46
+5 18
+5 29
+6 7
+8 9
+10 11
+12 13
+14 15
+14 16
+17 10
+17 8
+18 10
+19 12
+20 12
+21 12
+21 42
+21 49
+21 44
+21 22
+21 28
+21 27
+22 0
+22 6
+23 0
+24 0
+24 28
+25 2
+26 2
+26 18
+27 2
+28 2
+29 4
+30 4
+30 17
+30 38
+31 4
+32 6
+33 6
+34 8
+35 8
+35 25
+35 31
+36 8
+36 52
+37 14
+38 14
+39 24
+39 25
+39 44
+39 33
+39 53
+39 23
+40 41
+40 36
+40 38
+40 53
+41 37
+42 30
+42 23
+43 35
+43 24
+43 48
+43 32
+44 17
+44 29
+45 46
+45 35
+45 34
+46 47
+46 23
+46 27
+47 50
+47 38
+47 33
+47 19
+48 47
+49 26
+49 32
+49 34
+50 20
+51 37
+52 20
+53 20

@@ -24,13 +24,24 @@ for i = 1:nb_reseaux
     elseif type_norm == 1
         u = [13*6*v3/(n*(n-1)*(n-2));199*24*v4/(n*(n-1)*(n-2)*(n-3))];
     elseif type_norm == 2
-        u = [13*v3/norm(v3);199*v4/norm(v4)];
+        u = [13*v3/norm(v3,1);199*v4/norm(v4,1)];
     end
     %
-    if norm_2
+    if norm_2 == 1
         V(:,i) = u/norm(u);
     else
         V(:,i) = u;
     end
 end
+
+if norm_2 == 2
+    for i=1:t_vect
+        V(i,:) = V(i,:)/norm(V(i,:));
+    end
+    for i=1:nb_reseaux
+        V(:,i) = V(:,i)/norm(V(:,i));
+    end
+    
+end
+
 end

@@ -3,7 +3,6 @@ fw_WEB326_0
 fw_WEB347_0
 fw_Otago-Harbor_parasite_no_conomitant_0
 fw_WEB230_0
-fw_Ythan-Estuary_parasite_no_conomitant_0
 fw_baywet_0
 fw_WEB226_0
 fw_WEB123_0
@@ -12,7 +11,6 @@ fw_maayan-foodweb_0
 fw_WEB308_0
 fw_WEB234_0
 fw_WEB238_0
-fw_Ythan-Estuary_parasite_with_conomitant_0
 fw_WEB239_0
 fw_Sylt-Tidal-Basin_parasite_with_conomitant_0
 fw_StMarks_0
@@ -23,7 +21,6 @@ fw_WEB228_0
 fw_Otago-Harbor_parasite_with_conomitant_0
 fw_Bahia-Falsa_parasite_no_conomitant_0
 fw_Bahia-Falsa_parasite_with_conomitant_0
-fw_Ythan-Estuary_free_living_only_0
 fw_mangdry_0
 fw_Carpinteria-Salt-Marsh_parasite_no_conomitant_0
 fw_baydry_0
@@ -66,5 +63,8 @@ fw_Carpinteria-Salt-Marsh_free_living_only_0
 fw_WEB182_0
 fw_Flensbrug-Fjord_parasite_no_conomitant_0
 fw_WEB231_0
+fw_Ythan-Estuary_free_living_only_0
+fw_Ythan-Estuary_parasite_no_conomitant_0
+fw_Ythan-Estuary_parasite_with_conomitant_0
 fw_WEB244_0
 fw_Flensbrug-Fjord_free_living_only_0

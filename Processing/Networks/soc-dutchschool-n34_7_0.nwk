@@ -1,0 +1,133 @@
+# One weak connected component from an initial graph with characteristics :
+# http://www.stats.ox.ac.uk/~snijders/siena/BaerveldtData.html
+# number of removed self loops : 0
+# number of removed multi edges : 0
+# percentage of bipartivity : 0
+# percentage of bidirected edges : 59.50413223140496
+# number of nodes : 53; number of edges : 121
+# in this component : 
+# bipartivity : 0
+# percentage of bidirected edges : 60.0
+# number of nodes : 51; number of edges : 120
+!n:51
+!m:120
+0 1
+0 2
+0 3
+0 4
+1 0
+1 2
+1 32
+1 14
+1 33
+1 34
+1 4
+2 0
+2 1
+2 35
+2 32
+2 33
+2 34
+2 4
+3 0
+3 23
+3 17
+4 0
+4 14
+5 6
+6 5
+6 8
+6 28
+6 24
+6 9
+6 29
+7 8
+7 9
+8 7
+8 24
+10 11
+10 12
+11 10
+11 12
+11 17
+12 10
+12 11
+12 15
+13 14
+13 15
+13 16
+15 12
+15 14
+16 13
+16 15
+17 11
+17 26
+17 3
+18 19
+18 20
+18 21
+19 18
+19 22
+20 18
+20 21
+21 36
+21 20
+22 26
+22 17
+23 3
+23 17
+24 8
+25 26
+25 27
+26 18
+26 23
+26 25
+26 22
+26 17
+26 30
+26 14
+26 31
+26 27
+28 5
+28 6
+28 9
+28 29
+29 7
+29 25
+29 28
+29 6
+29 24
+29 9
+30 26
+31 7
+31 43
+31 45
+32 42
+32 34
+33 1
+33 2
+34 1
+34 2
+34 41
+34 32
+34 16
+35 0
+35 1
+35 4
+36 21
+37 9
+38 39
+38 40
+38 37
+38 22
+41 32
+41 34
+43 31
+43 44
+44 43
+44 46
+45 47
+45 48
+45 49
+45 50
+46 44

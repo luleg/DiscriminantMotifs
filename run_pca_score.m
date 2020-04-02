@@ -6,7 +6,7 @@ close all
 % some global variables
 
 global nb_ites
-nb_ites = 1; % number of iterations (number of classifiers based on 1 PCA
+nb_ites = 10; % number of iterations (number of classifiers based on 1 PCA
 % basis instance)
 global disp_fig
 disp_fig = false; % do you want to display the Figures ?
@@ -25,7 +25,10 @@ type_norm = 0; % first step
 % 1 : 13*6*v3/(n-2)*(n-1)*n
 % 2 : 13*v3/norm(v3), 199*v4/norm(v4)
 global norm_2
-norm_2 = true; % second step (normalisation in norm-2)
+norm_2 = 1; % second step (normalisation in norm-2)
+% 1 : x/norm(x)
+% 2 : x(motifk)/norm([xi(motifk), i = 1 :nb_graphs])
+% else :  no normalisation
 
 global nb_k 
 nb_k = 7;% for the k-nn classifier number of closest neighbours to look at

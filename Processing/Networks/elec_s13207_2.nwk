@@ -1,0 +1,84 @@
+# One weak connected component from an initial graph with characteristics :
+# http://pld.ttu.ee/~maksim/benchmarks/iscas89/bench/
+# number of removed self loops : 0
+# number of removed multi edges : 0
+# percentage of bipartivity : 100
+# percentage of bidirected edges : 0.0
+# number of nodes : 8651; number of edges : 11803
+# in this component : 
+# bipartivity : 0
+# percentage of bidirected edges : 0.0
+# number of nodes : 71; number of edges : 71
+!n:71
+!m:71
+1 40
+2 18
+3 68
+4 62
+5 54
+6 11
+7 1
+8 35
+9 19
+10 69
+11 33
+12 26
+13 11
+14 52
+15 9
+16 55
+16 61
+16 6
+17 22
+18 16
+19 25
+19 13
+20 65
+21 47
+22 46
+23 17
+25 3
+26 23
+27 39
+28 66
+30 12
+31 7
+32 20
+33 32
+34 45
+35 4
+36 21
+37 29
+38 59
+39 44
+40 15
+41 48
+42 41
+43 63
+44 56
+45 24
+46 57
+46 14
+47 42
+48 43
+49 67
+50 51
+52 36
+53 30
+54 53
+55 34
+56 28
+56 6
+57 0
+58 60
+59 10
+60 2
+61 13
+62 70
+63 50
+65 5
+66 37
+67 31
+68 64
+69 58
+70 27

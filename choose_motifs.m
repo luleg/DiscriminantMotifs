@@ -6,7 +6,7 @@ close all
 % some global variables
 
 global nb_ites
-nb_ites = 500; % number of iterations (number of classifiers based on 1 PCA
+nb_ites = 5000; % number of iterations (number of classifiers based on 1 PCA
 % basis instance)
 global disp_fig
 disp_fig = false; % do you want to display the Figures ?
@@ -24,7 +24,13 @@ type_norm = 0; % first step
 % 1 : 13*6*v3/(n-2)*(n-1)*n
 % 2 : 13*v3/norm(v3), 199*v4/norm(v4)
 global norm_2
-norm_2 = true; % second step (normalisation in norm-2)
+norm_2 = 1; % second step (normalisation in norm-2)
+% 1 : x/norm(x)
+% 2 : x(motifk)/norm([xi(motifk), i = 1 :nb_graphs])
+% else :  no normalisation
+
+norm_3 = false; % Do you want to normalise vectors once you have kept only 
+% the k most discriminatory motifs
 
 global nb_k
 nb_k = 7;% for the k-nn classifier number of closest neighbours to look at
@@ -144,12 +150,15 @@ for iter = 1:nb_ites
     
     Vt = generate_basis(lreseaux_test);
     
-    %% HERE
+   
     for nb_motifs=1:nb_tests
         keep_motifs = sort_motif(1:nb_motifs,1);
         C =V(keep_motifs,:)';
         Ct = Vt(keep_motifs,:)';
-        
+        if norm_3
+            Cn = diag(1./sqrt(diag(C*C'))); C = Cn*C;
+            Cn = diag(1./sqrt(diag(Ct*Ct'))); Ct = Cn*Ct;
+        end
         knn
         
         V_all = [C;Ct];
@@ -176,7 +185,7 @@ end
 
 figure(1),clf,
 sgtitle('F1-score and std according to the number of motifs kept')
-subplot(2,2,1), errorbar(1:nb_tests,f1_all(:,1),std_all(:,1),'b-','linewidth',2),xlim([1,15]), title('Foodwebs'), xlabel('number of motifs'), ylabel('F1-score')
-subplot(2,2,2), errorbar(1:nb_tests,f1_all(:,2),std_all(:,2),'m-','linewidth',2),xlim([1,15]), title('Electronic Circuits'), xlabel('number of motifs'), ylabel('F1-score')
-subplot(2,2,3), errorbar(1:nb_tests,f1_all(:,3),std_all(:,3),'k-','linewidth',2),xlim([1,15]), title('Discourse Structures'), xlabel('number of motifs'), ylabel('F1-score')
-subplot(2,2,4), errorbar(1:nb_tests,f1_all(:,4),std_all(:,4),'r-','linewidth',2),xlim([1,15]), title('Social Networks'), xlabel('number of motifs'), ylabel('F1-score')
+subplot(2,2,1), errorbar(1:nb_tests,f1_all(:,1),std_all(:,1),'b-','linewidth',2),xlim([1,30]), title('Foodwebs'), xlabel('number of motifs'), ylabel('F1-score')
+subplot(2,2,2), errorbar(1:nb_tests,f1_all(:,2),std_all(:,2),'m-','linewidth',2),xlim([1,30]), title('Electronic Circuits'), xlabel('number of motifs'), ylabel('F1-score')
+subplot(2,2,3), errorbar(1:nb_tests,f1_all(:,3),std_all(:,3),'k-','linewidth',2),xlim([1,30]), title('Discourse Structures'), xlabel('number of motifs'), ylabel('F1-score')
+subplot(2,2,4), errorbar(1:nb_tests,f1_all(:,4),std_all(:,4),'r-','linewidth',2),xlim([1,30]), title('Social Networks'), xlabel('number of motifs'), ylabel('F1-score')
