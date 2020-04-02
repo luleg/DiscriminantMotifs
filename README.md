@@ -1,8 +1,9 @@
 # DiscriminantMotifs
 Reproducibility of the results from ''Discriminatory Motifs of Complex Networks''  and a few more things that have been analysed but that are not in the paper
 
-Architecture :
+h2 Architecture :
 Folders :
+
     -> Processing/Networks :
         Networks on the following format
             # one or several lines
@@ -16,6 +17,7 @@ Folders :
       Node's labels are integers, from 0 to n. The letters before the first
       '-' indicate the field of the network (fw:  foodweb, elec: electronic
       circuits, stac: discourse structure, soc: social networks).
+
     -> Processing/CountMotifs
        decomposition of networks into 3-node and 4-node motifs. Files are
        labelled such that : {nwk-id}_motif{#k}-counts.tab, where
