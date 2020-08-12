@@ -30,7 +30,7 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
 #### Figures Affinity Matrix and Threshold Sparsification / Confusion Matrix to the Left :
   run afty_threshold.m
 #### Figure Closest Neighbour Sparsification / Confusion Matrix to the Right :
-  run aft_knn.m
+  run afty_knn.m
 
 ## Architecture :
 
