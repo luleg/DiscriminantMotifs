@@ -38,8 +38,8 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
   Matlab files, scripts and functions used by the main run_* scripts
 #### Processing/Networks :
   Networks used in the tests, on the following format :
+
     # one or several lines
-    
     # that give indication about
     # the network
     !n:number_of_nodes
