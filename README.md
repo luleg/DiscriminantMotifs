@@ -30,7 +30,7 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
 #### Figures Affinity Matrix and Threshold Sparsification / Confusion Matrix to the Left :
   run afty_threshold.m
 #### Figure Closest Neighbour Sparsification / Confusion Matrix to the Right :
-  run aft_knn.m
+  run afty_knn.m
 
 ## Architecture :
 
@@ -38,6 +38,7 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
   Matlab files, scripts and functions used by the main run_* scripts
 #### Processing/Networks :
   Networks used in the tests, on the following format :
+
     # one or several lines
     # that give indication about
     # the network
