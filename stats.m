@@ -81,7 +81,7 @@ stats_stac1(1,:) = [max(stats_stac(1,:)), min(stats_stac(1,:)), mean(stats_stac(
 stats_stac1(2,:) = [max(stats_stac(2,:)), min(stats_stac(2,:)), mean(stats_stac(2,:)), median(stats_stac(2,:)), std(stats_stac(2,:))];
 stats_stac1(3,:) = [max(stats_stac(3,:)), min(stats_stac(3,:)), mean(stats_stac(3,:)), median(stats_stac(3,:)), std(stats_stac(3,:))];
 RhetDiscourses = Labels; Minimum = stats_stac1(:,2);Maximum = stats_stac1(:,1);Mean = stats_stac1(:,3);Median = stats_stac1(:,4);Std = stats_stac1(:,5);
-tab_stac = table(ElecCircuits,Minimum,Maximum,Mean,Median,Std);
+tab_stac = table(RhetDiscourses,Minimum,Maximum,Mean,Median,Std);
 disp(tab_stac)
 
 % same as food webs for social networks :
