@@ -49,6 +49,7 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
     ...
 #### MatNetworks :
   Each mat file contains a struct Pbm that contains information about the network:
+  
     -> Pbm.entete : textual information (website, preprocessing, etc.)
     -> Pbm.nb_nodes/nb_edges : number of nodes/edges (a bidirected edges counts for two edges)
     -> Pbm.motif3 : a matrix 13x2. Pbm.motif3(k,1) : id of 3-node kth motif
