@@ -1,4 +1,4 @@
-function [tab_prec,tab_rec,tab_f1,Conf] = postproc_scores(tens_Conf)
+function [tab_prec,tab_rec,tab_f1,Conf,tab_acc] = postproc_scores(tens_Conf)
 % Postprocessing of the quality scores: from tens_infos and tens_Conf,
 % return 3 tables that contains the minimum, maximum, mean and standard 
 % deviation over all the iterations of respectively precision, recall, and
@@ -9,7 +9,7 @@ function [tab_prec,tab_rec,tab_f1,Conf] = postproc_scores(tens_Conf)
 
 nb_ites = size(tens_Conf,3);
 
-
+Acc = zeros(nb_ites,1);
 prec = zeros(nb_ites,4);
 rec = zeros(nb_ites,4);
 f1 = zeros(nb_ites,4);
@@ -22,17 +22,21 @@ D = diag(1./D);
 
 for i=1:nb_ites
     Conf = tens_Conf(:,:,i);
-    tp = diag(Conf); tp = tp(:);
-    fn = Conf*e-tp;
+    tp = diag(Conf); tp = tp(:); 
+    nbN = Conf*e;fn = nbN-tp;
+    Acc(i)=sum(tp)/sum(nbN);
     fp = (e'*Conf)'-tp;
     prec(i,:) = tp./(tp+fp);
+    prec(i,isnan(prec(i,:))) = 0;
     rec(i,:) = tp./(tp+fn);
+    rec(i,isnan(rec(i,:))) = 0;
     f1(i,:) = 2*(prec(i,:).*rec(i,:))./(prec(i,:)+rec(i,:));
+    f1(i,isnan(f1(i,:))) = 0;
     CConf = CConf+D*Conf;
 end
 
 Conf = 1/nb_ites*CConf;
-
+tab_acc = [min(Acc),max(Acc),mean(Acc),std(Acc)];
 tab_prec = [min(prec(:,1)), min(prec(:,2)), min(prec(:,3)), min(prec(:,4));
     max(prec(:,1)), max(prec(:,2)), max(prec(:,3)), max(prec(:,4));
     mean(prec,1);

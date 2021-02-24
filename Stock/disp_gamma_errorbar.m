@@ -87,7 +87,7 @@ ttl = title(titre);
 ttl.FontSize  = 20;
 
 ax = gca;
-ax.YAxisLocation = 'right';
+ax.YAxisLocation = 'left';
 ax.YAxis.Label.String = '\gamma(graphlet_k)';
 ax.YAxis.Label.FontSize = 20;
 

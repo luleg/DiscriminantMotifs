@@ -1,5 +1,4 @@
-% script to create the k-nn classifier based on the discriminant motifs of
-% the networks.
+% run the classifier based on the networks embedding found via graph2vec.
 addpath('Stock')
 clear variables;clc;
 close all
@@ -7,8 +6,8 @@ close all
 addpath('..')
 
 load RandPermDatasets
-nb_ites = size(lind_elec,1);
-% nb_ites = 10;
+% nb_ites = size(lind_elec,1);
+nb_ites = 50;
 
 % some global variables
 
@@ -99,7 +98,7 @@ soct = 1:nbt_soc; soct = soct +nbt_stac+nbt_elec+nbt_fw;
 
 
 load RandPermDatasets
-
+t_all = 0;
 for iter = 1:nb_ites
     if mod(iter,50) == 0
         disp(['iteration number: ',int2str(iter),' over ',int2str(nb_ites),'.']);
@@ -110,7 +109,7 @@ for iter = 1:nb_ites
     ind_elec = lind_elec(iter,:);
     ind_stac = lind_stac(iter,:);
     ind_soc = lind_soc(iter,:);
-    
+    temps = cputime;
     C = [V_fw(:,ind_fw(1:nb_basis)),V_elec(:,ind_elec(1:nb_basis)),V_stac(:,ind_stac(1:nb_basis)),V_soc(:,ind_soc(1:nb_basis))];
  
     
@@ -129,7 +128,7 @@ for iter = 1:nb_ites
 
     Ct = Ct';
     dist2mean
-    
+    t_all = t_all + cputime-temps;
     tens_Conf(:,:,iter) = Conf2mean;
 end
 

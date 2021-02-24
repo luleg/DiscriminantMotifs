@@ -1,5 +1,4 @@
-% script to create the k-nn classifier based on the discriminant motifs of
-% the networks.
+% run the classifier based on the networks embedding found via gl2vec.
 addpath('Stock')
 clear variables;clc;
 close all
@@ -8,6 +7,7 @@ addpath('..')
 
 load RandPermDatasets
 nb_ites = size(lind_elec,1);
+nb_ites = 50;
 
 % some global variables
 

@@ -1,7 +1,7 @@
 % Script that compute the PCA of basis V
 % V = [v1,...,vn], where vk is the kth network characterised by its
-% decomposition onto 3-node and 4-node motifs
-nb_tr = size(V,2);
+% decomposition onto k-node motifs
+[t_vect,nb_tr] = size(V);
 % compute the mean element of the dataset V
 x_b = 1/nb_reseaux*V*ones(nb_tr,1);
 X = V-x_b*ones(1,nb_tr); % X is the centered dataset
@@ -9,13 +9,15 @@ X = V-x_b*ones(1,nb_tr); % X is the centered dataset
 
 % Variance-Covariance matrix of V:
 S = 1/nb_reseaux * X*X';
-
 % just a trick to enforce S to be symmetric, hence eig provides real
 % values (S is expected to be symmetric to the rounding errors)
 S = 1/2*(S+S');
-[U,D] = eig(S); % U : basis of eigenvectors, D : diagonal matrix containing
+% [U,D,flag] = eigs(S,20,'lr'); % U : basis of eigenvectors, D : diagonal matrix containing
+[U,D,flag] = eigs(S,min(t_vect,20),'lr'); % U : basis of eigenvectors, D : diagonal matrix containing
+if flag ~=0
+    disp ("Imprecision in Eigenvectors")
+end
 % eigenvalues
-
 [D,ind_sort_D] = sort(diag(D),'descend');
 U = U(:,ind_sort_D);
 
@@ -50,6 +52,7 @@ if disp_fig
     legend('eigenvalues','eigenvalues kept')
     subplot(2,1,2),hold on,
     plot([nb_ax+0.5 nb_ax+0.5],[min(cumsum(D)/sum(D)*100) 100],'k-.','linewidth',2)
+    pause
     
 end
 

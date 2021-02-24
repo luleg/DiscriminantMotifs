@@ -6,7 +6,7 @@ close all
 
 load RandPermDatasets
 nb_ites = size(lind_elec,1);
-% nb_ites = 10;
+nb_ites = 50;
 
 % some global variables
 

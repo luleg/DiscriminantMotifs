@@ -7,26 +7,72 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
   run stats.m
 
 ### Generate Table II
+#### PCA :
+  run run_pca.m
+  To change the normalisation, modify global variable ``type_norm`` (line 43)
+#### LDA :
+  run run_lda.m
+  To change the normalisation, modify global variable ``type_norm`` (line 43)
+
+### Generate Table III
+  run run_pca.m
+  To change the kind of k-node graphlets to be used, modify motif3/4/5 lines 16-18
+
+### Generate Table IV
+  run run_graph2vec.m
+  To change the size of the embeddings, modify the global variable ``t_emb`` line 21
+    Can be 2,4,8,16,32,64,128,256,512.
+  To change the depth of the WL kernel, modify the global variable ``t_wl`` line 21
+    Can be 1,2,3.
+
+### Generate Table V
+  Go in the GCNs folder.
+#### GCNs
+  python3 run_GCN.py -pooling max/mean/sum -hidd 4/8/12 -nbLay 1/2/3
+      You may also change the variable ``nbItes`` (line 15), so that ``nbItes = 10``
+  python3 analysis.py GCN_poolmax/mean/sum_nbLay1/2/3_hidd4/8/12
+#### RGCNs
+  python3 run_RGCN.py -pooling max/mean/sum -hidd 4/8/12 -nbLay 1/2/3
+      You may also change the variable ``nbItes`` (line 15), so that ``nbItes = 10``
+  python3 analysis.py RGCN_poolmax/mean/sum_nbLay1/2/3_hidd4/8/12
+
+
+### Generate Table VI
 #### Our method :
   run run_pca.m
 #### Gl2Vec :
   run run_gl2vec.m
 #### Graph2Vec :
   run run_graph2vec.m
+#### GCNs (takes a long time)
+  python3 run_GCN.py
+      Change the variable ``nbItes = 50`` (line 15)
+  python3 analysis.py GCN_poolmean_nbLay2_hidd12
+#### RGCNs (takes a long time)
+  python3 run_RGCN.py
+      Change the variable ``nbItes = 50`` (line 15)
+  python3 analysis.py RGCN_poolmean_nbLay2_hidd8
 
-### Generate Figure I
+
+### Generate Table VII
+  run run_pca_wiki.m
+
+### Generate Figures VI, VII, VIII
+  run run_Wiki_figures.m
+
+### Generate Figure IX
 #### Gamma-score :
   run run_GammaAnalysis.m
 #### RF-score :
-  run run_RFSelection.m
+  run run_RFAnalysis.m
 
-### Generate Table II
+### Generate Table VIII
 #### Our method :
   run run_feature_select.m
 #### RF feature selection :
-  run run_RFSelection.m
+  run run_RFAnalysis.m
 
-### Generate Figure II and Confusion Matrices from Table IV
+### Generate Figure X and Confusion Matrices from Table X
 #### Figures Affinity Matrix and Threshold Sparsification / Confusion Matrix to the Left :
   run afty_threshold.m
 #### Figure Closest Neighbour Sparsification / Confusion Matrix to the Right :
@@ -47,6 +93,16 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
     v_src1 v_tgt1
     v_src2 v_tgt2
     ...
+#### Processing/Wiki_Graph_remove_40_0_500 :
+  Wikipedia Networks, on the following format :
+
+    # Article : Name_of_the_Wikipedia_Article
+    # FROM date_of_the_first_version_of_interest TO date_of_the_last_version_of_interest
+    number_of_nodes number_of_edges
+    v_src1 v_tgt1
+    v_src2 v_tgt2
+    ...
+
 #### MatNetworks :
   Each mat file contains a struct Pbm that contains information about the network:
     -> Pbm.entete : textual information (website, preprocessing, etc.)
@@ -54,6 +110,7 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
     -> Pbm.motif3 : a matrix 13x2. Pbm.motif3(k,1) : id of 3-node kth motif
                                  Pbm.motif3(k,2) : occurrence number of motif k in the network
     -> Pbm.motif4 : same for 4-node motif
+    -> Pbm.motif5 : same for 5-node motif (does not exist for all networks)
     -> Pbm.edges : a matrix Pbm.nb_edges x 2 where (Pbm.edges(i,1), Pbm.edges(i,2)) = (v_srci,v_tgti)
 
 ### Gl2Vec :
@@ -72,5 +129,5 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
   A Python Code to obtain the average Gini importance of each graphlets by training a forest of 100 trees (using scikit-learn).
 
 ### Clusterix :
-  Matlab files to run the unsupervised clustering algorithm used in Section VI.
+  Matlab files to run the unsupervised clustering algorithm used in Section V.
   (See https://pdfs.semanticscholar.org/6235/cf4b551f768fa793ed759de75f2a01475e77.pdf for the algorithm description).

@@ -22,7 +22,7 @@ global p
 p =-1; % percentage of trace to keep in the PCA (if <0 one keeps a number 
 % of axes instead of a percentage of trace)
 global nb_ax 
-nb_ax = 11;
+nb_ax = 10;
 
 nb_basis = 40; % number of networks from each field used to generate the
 % PCA basis
