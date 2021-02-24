@@ -105,10 +105,11 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
 
 #### MatNetworks :
   Each mat file contains a struct Pbm that contains information about the network:
+  
     -> Pbm.entete : textual information (website, preprocessing, etc.)
     -> Pbm.nb_nodes/nb_edges : number of nodes/edges (a bidirected edges counts for two edges)
     -> Pbm.motif3 : a matrix 13x2. Pbm.motif3(k,1) : id of 3-node kth motif
-                                 Pbm.motif3(k,2) : occurrence number of motif k in the network
+                                   Pbm.motif3(k,2) : occurrence number of motif k in the network
     -> Pbm.motif4 : same for 4-node motif
     -> Pbm.motif5 : same for 5-node motif (does not exist for all networks)
     -> Pbm.edges : a matrix Pbm.nb_edges x 2 where (Pbm.edges(i,1), Pbm.edges(i,2)) = (v_srci,v_tgti)
