@@ -4,11 +4,11 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
 ## Generation of Tables and Figures
 
 ### Generate Table I
-  run stats.m
+  run ``stats.m``
 
 ### Generate Table II
 #### PCA :
-  run run_pca.m
+  run ``run_pca.m``\n
   To change the normalisation, modify global variable ``type_norm`` (line 43)
 #### LDA :
   run run_lda.m
