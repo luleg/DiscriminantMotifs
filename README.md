@@ -8,7 +8,8 @@ Reproducibility of the results from ''A Simple Embedding for Classifying Network
 
 ### Generate Table II
 #### PCA :
-  run ``run_pca.m``\n
+  run ``run_pca.m``
+  
   To change the normalisation, modify global variable ``type_norm`` (line 43)
 #### LDA :
   run run_lda.m
