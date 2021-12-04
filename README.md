@@ -1,4 +1,4 @@
-# DiscriminantMotifs
+# Discreminate Networks Using a Few Graphlets
 Reproducibility of the results from ''A Simple Embedding for Classifying Networks with a few Graphlets''
 
 ## Generation of Tables and Figures
